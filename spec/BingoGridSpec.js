@@ -3,9 +3,10 @@ describe('BingoGrid', function() {
   var grid;
 
   it('should initialize itself with rows and cols', function() {
-    grid = new BingoGrid(1, 1);
+    grid = new BingoGrid(2, 3);
     expect(grid instanceof BingoGrid).toBeTruthy();
-    expect(grid.rows).toEqual(1);
+    expect(grid.rows).toEqual(2);
+    expect(grid.cols).toEqual(3);
   });
 
   it('should throw an error for invalid columns', function() {
@@ -22,10 +23,6 @@ describe('BingoGrid', function() {
     }
 
     expect(badBingoInit).toThrow(new Error('Cols must be positive integer'));
-  });
-
-  it('should initialize itself with rows and cols', function() {
-    grid = new BingoGrid(1, 1);
   });
 
 });
